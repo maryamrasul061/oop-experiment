@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+private:
+    int id;
+    string name;
+    double basicSalary;
+
+public:
+    void input() {
+        cout << "Enter ID: ";
+        cin >> id;
+        cout << "Enter Name: ";
+        cin >> name;
+        cout << "Enter Basic Salary: ";
+        cin >> basicSalary;
+    }
+
+    double annualSalary() {
+        return basicSalary * 12;
+    }
+
+    void display() {
+        cout << "ID: " << id << "\nName: " << name
+            << "\nAnnual Salary: " << annualSalary() << endl;
+    }
+};
+
+int main() {
+    Employee e;
+    e.input();
+    e.display();
+}
