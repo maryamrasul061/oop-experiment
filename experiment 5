@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+// Define structure
+struct Date
+{
+    int month;
+    int day;
+    int year;
+};
+
+int main()
+{
+    Date d;
+
+    cout << "Enter a date (MM/DD/YYYY): ";
+    cin >> d.month;
+    cin.ignore();  // Ignore '/'
+    cin >> d.day;
+    cin.ignore();  // Ignore '/'
+    cin >> d.year;
+
+    cout << "\nDate entered: ";
+    cout << d.month << "/" << d.day << "/" << d.year << endl;
+
+    return 0;
+}
