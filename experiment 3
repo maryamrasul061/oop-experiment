@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+private:
+    string name;
+    double salary;
+
+public:
+    Employee(string n, double s) {
+        name = n;
+        salary = s;
+    }
+
+    void display() {
+        cout << "Employee: " << name << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main() {
+    Employee e("Ahmed", 60000);
+    e.display();
+
+    return 0;
+}
